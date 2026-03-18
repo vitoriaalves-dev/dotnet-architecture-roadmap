@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TodoApp.DTOs;
 using TodoApp.Models;
 using TodoApp.Services;
 
@@ -21,28 +22,28 @@ public class TodoController : ControllerBase
     [HttpGet("{id}")]
     public IActionResult GetById(Guid id)
     {
-        var item = _service.GetById(id);
-        return item == null ? NotFound() : Ok(item);
+        TodoItem? item = _service.GetById(id);
+        return item is null ? NotFound() : Ok(item);
     }
 
     [HttpPost]
-    public IActionResult Post(TodoItem item)
+    public IActionResult Post(CreateTodoItemDto createTodoItemDto)
     {
-        var created = _service.Create(item);
+        TodoItem created = _service.Create(createTodoItemDto);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
 
     [HttpPut("{id}")]
-    public IActionResult Put(Guid id, TodoItem item)
+    public IActionResult Put(Guid id, UpdateTodoItemDto updateTodoItemDto)
     {
-        _service.Update(id, item);
-        return NoContent();
+        bool updated = _service.Update(id, updateTodoItemDto);
+        return updated ? NoContent() : NotFound();
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(Guid id)
     {
-        _service.Delete(id);
-        return NoContent();
+        bool deleted = _service.Delete(id);
+        return deleted ? NoContent() : NotFound();
     }
 }
