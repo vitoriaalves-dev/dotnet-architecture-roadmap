@@ -10,10 +10,12 @@ builder.Services.AddSwaggerGen();
 
 // dependencies injection
 builder.Services.AddOpenApi();
+
 builder.Services.AddSingleton<IProductRepository, InMemoryProductRepository>();
-builder.Services.AddScoped<ProductService, ProductService>();
+builder.Services.AddScoped<ProductService>();
+
 builder.Services.AddSingleton<IOrderRepository, InMemoryOrderRepository>();
-builder.Services.AddScoped<OrderService, OrderService>();
+builder.Services.AddScoped<OrderService>();
 
 var app = builder.Build();
 
