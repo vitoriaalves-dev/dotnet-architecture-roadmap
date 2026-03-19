@@ -1,3 +1,4 @@
+using EcommerceApp.Domain.Entities;
 namespace EcommerceApp.Infrastructure.Repositories;
 
 public interface IProductRepository

@@ -1,3 +1,7 @@
+using EcommerceApp.Domain.Entities;
+using EcommerceApp.Infrastructure.Repositories;
+
+namespace EcommerceApp.Application.Services;
 public class ProductService
 {
     private readonly IProductRepository _repository;

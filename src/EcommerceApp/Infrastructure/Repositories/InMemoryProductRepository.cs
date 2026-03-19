@@ -1,3 +1,8 @@
+using EcommerceApp.Domain.Entities;
+using EcommerceApp.Infrastructure.Repositories;
+
+namespace EcommerceApp.Infrastructure.Repositories;
+
 public class InMemoryProductRepository : IProductRepository
 {
     private readonly List<Product> _products = new();

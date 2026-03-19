@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Mvc;
+using EcommerceApp.Application.Services;
+using EcommerceApp.Domain.Entities;
+
 [ApiController]
 [Route("api/products")]
 public class ProductController : ControllerBase

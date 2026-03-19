@@ -1,3 +1,6 @@
+using EcommerceApp.Domain.Entities;
+using EcommerceApp.Infrastructure.Repositories;
+namespace EcommerceApp.Infrastructure.Repositories;
 public class InMemoryOrderRepository : IOrderRepository
 {
     private readonly List<Order> _orders = new();

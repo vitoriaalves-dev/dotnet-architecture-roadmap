@@ -1,3 +1,8 @@
+using EcommerceApp.Domain.Entities;
+using EcommerceApp.Infrastructure.Repositories;
+
+namespace EcommerceApp.Application.Services;
+
 public class OrderService
 {
     private readonly IOrderRepository _repository;
