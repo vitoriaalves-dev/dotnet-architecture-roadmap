@@ -1,6 +1,5 @@
 using EcommerceApp.Domain.Entities;
-using EcommerceApp.Infrastructure.Repositories;
-
+using EcommerceApp.Application.Ports.Out;
 namespace EcommerceApp.Adapters.Outbound.Repositories;
 
 public class InMemoryProductRepository : IProductRepository
@@ -9,8 +8,8 @@ public class InMemoryProductRepository : IProductRepository
 
     public IEnumerable<Product> GetAll() => _products;
 
-    public Product? GetById(Guid id) =>
-        _products.FirstOrDefault(p => p.Id == id);
+    public Product? GetById(Guid id)
+        => _products.FirstOrDefault(p => p.Id == id);
 
     public void Add(Product product)
     {

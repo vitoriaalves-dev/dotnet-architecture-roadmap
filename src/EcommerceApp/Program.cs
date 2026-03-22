@@ -12,10 +12,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
 
 builder.Services.AddSingleton<IProductRepository, InMemoryProductRepository>();
-builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<IProductUseCase, ProductService>();
 
 builder.Services.AddSingleton<IOrderRepository, InMemoryOrderRepository>();
-builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<IOrderUseCase, OrderService>();
 
 var app = builder.Build();
 

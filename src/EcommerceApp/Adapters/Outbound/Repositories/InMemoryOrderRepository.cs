@@ -1,15 +1,16 @@
 using EcommerceApp.Domain.Entities;
-using EcommerceApp.Infrastructure.Repositories;
+using EcommerceApp.Application.Ports.Out;
 
 namespace EcommerceApp.Adapters.Outbound.Repositories;
+
 public class InMemoryOrderRepository : IOrderRepository
 {
     private readonly List<Order> _orders = new();
 
     public IEnumerable<Order> GetAll() => _orders;
 
-    public Order? GetById(Guid id) =>
-        _orders.FirstOrDefault(o => o.Id == id);
+    public Order? GetById(Guid id)
+        => _orders.FirstOrDefault(o => o.Id == id);
 
     public void Add(Order order)
     {

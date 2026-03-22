@@ -8,20 +8,20 @@ namespace EcommerceApp.Inbound.Controllers;
 [Route("api/products")]
 public class ProductController : ControllerBase
 {
-    private readonly ProductService _service;
+    private readonly IProductUseCase _useCase;
 
-    public ProductController(ProductService service)
+    public ProductController(IProductUseCase useCase)
     {
-        _service = service;
+        _useCase = useCase;
     }
 
     [HttpGet]
-    public IActionResult Get() => Ok(_service.GetAll());
+    public IActionResult Get() => Ok(_useCase.GetAll());
 
     [HttpPost]
     public IActionResult Post(Product product)
     {
-        var created = _service.Create(product);
+        Product created = _useCase.Create(product);
         return Ok(created);
     }
 }

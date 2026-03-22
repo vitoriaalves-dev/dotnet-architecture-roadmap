@@ -1,5 +1,5 @@
+using EcommerceApp.Application.Ports.Out;
 using EcommerceApp.Domain.Entities;
-using EcommerceApp.Infrastructure.Repositories;
 
 namespace EcommerceApp.Application.Services;
 
