@@ -1,5 +1,6 @@
 using EcommerceApp.Domain.Entities;
-namespace EcommerceApp.Infrastructure.Repositories;
+
+namespace EcommerceApp.Application.Ports.Out;
 
 public interface IOrderRepository
 {

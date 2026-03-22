@@ -1,8 +1,9 @@
+using EcommerceApp.Application.Ports.Out;
+using EcommerceApp.Application.Ports.In;
 using EcommerceApp.Domain.Entities;
-using EcommerceApp.Infrastructure.Repositories;
-
 namespace EcommerceApp.Application.Services;
-public class ProductService
+
+public class ProductService : IProductUseCase
 {
     private readonly IProductRepository _repository;
 

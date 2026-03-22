@@ -1,5 +1,7 @@
 using EcommerceApp.Application.Services;
-using EcommerceApp.Infrastructure.Repositories;
+using EcommerceApp.Application.Ports.In;
+using EcommerceApp.Application.Ports.Out;
+using EcommerceApp.Adapters.Outbound.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
 
 builder.Services.AddSingleton<IProductRepository, InMemoryProductRepository>();
-builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<IProductUseCase, ProductService>();
 
 builder.Services.AddSingleton<IOrderRepository, InMemoryOrderRepository>();
 builder.Services.AddScoped<OrderService>();

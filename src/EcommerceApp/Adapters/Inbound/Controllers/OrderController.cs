@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using EcommerceApp.Application.Services;
 using EcommerceApp.Domain.Entities;
 
-namespace EcommerceApp.Controllers;
+namespace EcommerceApp.Inbound.Controllers;
 
 [ApiController]
 [Route("api/orders")]
