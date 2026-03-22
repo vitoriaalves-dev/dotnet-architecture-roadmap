@@ -1,9 +1,14 @@
 using EcommerceApp.Application.Services;
 using EcommerceApp.Application.Ports.In;
 using EcommerceApp.Application.Ports.Out;
-using EcommerceApp.Adapters.Outbound.Repositories;
+using EcommerceApp.Infrastructure.Repositories;
+using EcommerceApp.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<EcommerceDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 builder.Services.AddControllers();
 
@@ -13,11 +18,11 @@ builder.Services.AddSwaggerGen();
 // dependencies injection
 builder.Services.AddOpenApi();
 
-builder.Services.AddSingleton<IProductRepository, InMemoryProductRepository>();
+builder.Services.AddScoped<IProductRepository, SqlProductRepository>();
 builder.Services.AddScoped<IProductUseCase, ProductService>();
 
-builder.Services.AddSingleton<IOrderRepository, InMemoryOrderRepository>();
-builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<IOrderRepository, SqlOrderRepository>();
+builder.Services.AddScoped<IOrderUseCase, OrderService>();
 
 var app = builder.Build();
 

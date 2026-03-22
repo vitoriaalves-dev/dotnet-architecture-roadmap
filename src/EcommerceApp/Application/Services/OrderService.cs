@@ -1,9 +1,11 @@
 using EcommerceApp.Application.Ports.Out;
 using EcommerceApp.Domain.Entities;
 
+using EcommerceApp.Application.Ports.In;
+
 namespace EcommerceApp.Application.Services;
 
-public class OrderService
+public class OrderService : IOrderUseCase
 {
     private readonly IOrderRepository _repository;
 
