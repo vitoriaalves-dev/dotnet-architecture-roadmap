@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "sl3JUIyD0wE=",
+=======
+  "dgSpecHash": "EhRCXoXHuR4=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
   "expectedPackageFiles": [

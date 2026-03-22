@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using EcommerceApp.Application.Services;
+using EcommerceApp.Application.Ports.In;
 using EcommerceApp.Domain.Entities;
 
 namespace EcommerceApp.Inbound.Controllers;
@@ -8,23 +8,20 @@ namespace EcommerceApp.Inbound.Controllers;
 [Route("api/orders")]
 public class OrderController : ControllerBase
 {
-    private readonly OrderService _orderService;
+    private readonly IOrderUseCase _useCase;
 
-    public OrderController(OrderService orderService)
+    public OrderController(IOrderUseCase useCase)
     {
-        _orderService = orderService;
+        _useCase = useCase;
     }
 
     [HttpGet]
-    public IActionResult Get()
-    {
-        return Ok(_orderService.GetAll());
-    }
+    public IActionResult Get() => Ok(_useCase.GetAll());
 
     [HttpPost]
     public IActionResult Post(Order order)
     {
-        Order created = _orderService.Create(order);
+        Order created = _useCase.Create(order);
         return Ok(created);
     }
 }
