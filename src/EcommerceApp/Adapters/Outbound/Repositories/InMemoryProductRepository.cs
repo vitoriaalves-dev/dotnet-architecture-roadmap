@@ -1,5 +1,6 @@
 using EcommerceApp.Domain.Entities;
 using EcommerceApp.Application.Ports.Out;
+
 namespace EcommerceApp.Adapters.Outbound.Repositories;
 
 public class InMemoryProductRepository : IProductRepository

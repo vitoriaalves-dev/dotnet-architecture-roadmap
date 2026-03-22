@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using EcommerceApp.Application.Services;
 using EcommerceApp.Domain.Entities;
+using EcommerceApp.Application.Ports.In;
 
 namespace EcommerceApp.Inbound.Controllers;
 
