@@ -1,5 +1,6 @@
 using EcommerceApp.Domain.Entities;
-namespace EcommerceApp.Infrastructure.Repositories;
+
+namespace EcommerceApp.Adapters.Outbound.Repositories;
 
 public interface IProductRepository
 {

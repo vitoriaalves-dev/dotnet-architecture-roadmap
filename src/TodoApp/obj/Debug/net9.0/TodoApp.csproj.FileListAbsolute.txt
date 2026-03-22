@@ -8,6 +8,9 @@ C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\TodoApp.pdb
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\obj\Debug\net9.0\TodoApp.csproj.AssemblyReference.cache
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\obj\Debug\net9.0\TodoApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\obj\Debug\net9.0\TodoApp.AssemblyInfoInputs.cache
@@ -27,6 +30,3 @@ C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\obj
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\obj\Debug\net9.0\TodoApp.pdb
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\obj\Debug\net9.0\TodoApp.genruntimeconfig.cache
 C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\obj\Debug\net9.0\ref\TodoApp.dll
-C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\repos\dotnet-architecture-roadmap\dotnet-architecture-roadmap\src\TodoApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

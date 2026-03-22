@@ -1,7 +1,7 @@
 using EcommerceApp.Domain.Entities;
 using EcommerceApp.Infrastructure.Repositories;
 
-namespace EcommerceApp.Infrastructure.Repositories;
+namespace EcommerceApp.Adapters.Outbound.Repositories;
 
 public class InMemoryProductRepository : IProductRepository
 {
