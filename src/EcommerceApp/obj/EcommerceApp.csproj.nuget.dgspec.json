@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {}
+    "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {}
   },
   "projects": {
-    "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {
+    "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
+        "projectUniqueName": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
         "projectName": "EcommerceApp",
-        "projectPath": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
+        "projectPath": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
         "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\obj\\",
+        "outputPath": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -45,6 +45,16 @@
           "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.5, )"
             },
