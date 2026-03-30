@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using EcommerceApp.Application.Ports.In;
+using EcommerceApp.Application.Ports.Out;
 using EcommerceApp.Domain.Entities;
 
 namespace EcommerceApp.Inbound.Controllers;
@@ -9,10 +10,12 @@ namespace EcommerceApp.Inbound.Controllers;
 public class OrderController : ControllerBase
 {
     private readonly IOrderUseCase _useCase;
+    private readonly IOrderReportRepository _reportRepository;
 
-    public OrderController(IOrderUseCase useCase)
+    public OrderController(IOrderUseCase useCase, IOrderReportRepository reportRepository)
     {
         _useCase = useCase;
+        _reportRepository = reportRepository;
     }
 
     [HttpGet]
@@ -23,5 +26,11 @@ public class OrderController : ControllerBase
     {
         Order created = _useCase.Create(order);
         return Ok(created);
+    }
+
+    [HttpGet("reports")]
+    public IActionResult GetReports()
+    {
+        return Ok(_reportRepository.GetAll());
     }
 }

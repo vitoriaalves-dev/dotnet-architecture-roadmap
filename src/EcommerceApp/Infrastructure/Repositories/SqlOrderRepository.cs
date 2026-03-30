@@ -15,10 +15,10 @@ public class SqlOrderRepository : IOrderRepository
     }
 
     public IEnumerable<Order> GetAll()
-        => _context.Orders.AsNoTracking().ToList();
+        => _context.Orders.Include(o => o.Items).AsNoTracking().ToList();
 
     public Order? GetById(Guid id)
-        => _context.Orders.Find(id);
+        => _context.Orders.Include(o => o.Items).FirstOrDefault(o => o.Id == id);
 
     public void Add(Order order)
     {

@@ -4,11 +4,27 @@ using EcommerceApp.Application.Ports.Out;
 using EcommerceApp.Infrastructure.Repositories;
 using EcommerceApp.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var mongoConnectionString = builder.Configuration["Mongo:ConnectionString"]
+    ?? throw new InvalidOperationException("Mongo connection string 'Mongo:ConnectionString' was not configured.");
+var mongoDatabaseName = builder.Configuration["Mongo:Database"] ?? "ecommerce";
+
 builder.Services.AddDbContext<EcommerceDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+builder.Services.AddSingleton<IMongoClient>(_ =>
+    new MongoClient(mongoConnectionString));
+
+builder.Services.AddScoped(sp =>
+{
+    var client = sp.GetRequiredService<IMongoClient>();
+    return client.GetDatabase(mongoDatabaseName);
+});
+
+builder.Services.AddScoped<IOrderReportRepository, MongoOrderReportRepository>();
 
 builder.Services.AddControllers();
 
