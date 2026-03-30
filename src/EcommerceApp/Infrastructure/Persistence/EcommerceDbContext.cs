@@ -24,9 +24,11 @@ public class EcommerceDbContext : DbContext
         modelBuilder.Entity<Order>(entity =>
         {
             entity.HasKey(o => o.Id);
+
             entity.HasMany(o => o.Items)
-                  .WithOne()
-                  .HasForeignKey("OrderId");
+                .WithOne()
+                .HasForeignKey("OrderId")
+                .IsRequired();
         });
 
         modelBuilder.Entity<OrderItem>(entity =>

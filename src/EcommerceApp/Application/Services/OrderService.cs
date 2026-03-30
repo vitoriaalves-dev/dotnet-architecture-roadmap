@@ -7,18 +7,31 @@ namespace EcommerceApp.Application.Services;
 
 public class OrderService : IOrderUseCase
 {
-    private readonly IOrderRepository _repository;
+    private readonly IOrderRepository _orderRepository;
+    private readonly IOrderReportRepository _reportRepository;
 
-    public OrderService(IOrderRepository repository)
+    public OrderService(
+        IOrderRepository orderRepository,
+        IOrderReportRepository reportRepository)
     {
-        _repository = repository;
+        _orderRepository = orderRepository;
+        _reportRepository = reportRepository;
     }
-
-    public IEnumerable<Order> GetAll() => _repository.GetAll();
 
     public Order Create(Order order)
     {
-        _repository.Add(order);
+        order.Id = Guid.NewGuid();
+        order.CreatedAt = DateTime.UtcNow;
+
+        foreach (var item in order.Items)
+        {
+            item.Id = Guid.NewGuid();
+        }
+
+        _orderRepository.Add(order);      // SQL
+        _reportRepository.Save(order);    // Mongo
         return order;
     }
+
+    public IEnumerable<Order> GetAll() => _orderRepository.GetAll();
 }
