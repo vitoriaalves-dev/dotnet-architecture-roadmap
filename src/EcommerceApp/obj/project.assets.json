@@ -5187,11 +5187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
+      "projectUniqueName": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
       "projectName": "EcommerceApp",
-      "projectPath": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
+      "projectPath": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
       "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-      "outputPath": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\obj\\",
+      "outputPath": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5265,5 +5265,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\obj\\project.nuget.cache: '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

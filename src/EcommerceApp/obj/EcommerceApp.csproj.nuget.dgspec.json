@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {}
+    "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {}
   },
   "projects": {
-    "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {
+    "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
+        "projectUniqueName": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
         "projectName": "EcommerceApp",
-        "projectPath": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
+        "projectPath": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\EcommerceApp.csproj",
         "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "c:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\obj\\",
+        "outputPath": "C:\\repos\\dotnet-architecture-roadmap\\dotnet-architecture-roadmap\\src\\EcommerceApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config"
