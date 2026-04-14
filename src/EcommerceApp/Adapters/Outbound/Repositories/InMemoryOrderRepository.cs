@@ -14,7 +14,6 @@ public class InMemoryOrderRepository : IOrderRepository
 
     public void Add(Order order)
     {
-        order.Id = Guid.NewGuid();
         _orders.Add(order);
     }
 }

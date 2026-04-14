@@ -2,6 +2,7 @@ using EcommerceApp.Application.Ports.Out;
 using EcommerceApp.Domain.Entities;
 
 using EcommerceApp.Application.Ports.In;
+using EcommerceApp.Inbound.Requests;
 
 namespace EcommerceApp.Application.Services;
 
@@ -18,15 +19,9 @@ public class OrderService : IOrderUseCase
         _reportRepository = reportRepository;
     }
 
-    public Order Create(Order order)
-    {
-        order.Id = Guid.NewGuid();
-        order.CreatedAt = DateTime.UtcNow;
-
-        foreach (var item in order.Items)
-        {
-            item.Id = Guid.NewGuid();
-        }
+    public Order Create(CreateOrderRequest createOrderRequest)
+    {        
+        Order order = Order.Create(createOrderRequest.Items);
 
         _orderRepository.Add(order);      // SQL
         _reportRepository.Save(order);    // Mongo

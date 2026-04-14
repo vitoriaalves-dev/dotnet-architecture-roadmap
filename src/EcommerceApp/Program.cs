@@ -5,6 +5,7 @@ using EcommerceApp.Infrastructure.Repositories;
 using EcommerceApp.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
+using EcommerceApp.Adapters.Outbound.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +42,8 @@ builder.Services.AddScoped<IOrderRepository, SqlOrderRepository>();
 builder.Services.AddScoped<IOrderUseCase, OrderService>();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using EcommerceApp.Application.Ports.In;
 using EcommerceApp.Application.Ports.Out;
 using EcommerceApp.Domain.Entities;
+using EcommerceApp.Inbound.Requests;
 
 namespace EcommerceApp.Inbound.Controllers;
 
@@ -22,9 +23,9 @@ public class OrderController : ControllerBase
     public IActionResult Get() => Ok(_useCase.GetAll());
 
     [HttpPost]
-    public IActionResult Post(Order order)
+    public IActionResult Post(CreateOrderRequest createOrderRequest)
     {
-        Order created = _useCase.Create(order);
+        Order created = _useCase.Create(createOrderRequest);
         return Ok(created);
     }
 
